@@ -9,6 +9,9 @@ import { PaisesComponent } from './paises/paises.component';
 import { DestinatariosComponent } from './destinatarios/destinatarios.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { HttpClientModule } from "@angular/common/http";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { ListProjectsFilter01Component } from './list-projects-filter01/list-projects-filter01.component';
+import { Filter01Component } from './list-projects-filter01/filter01/filter01.component';
 
 @NgModule({
   declarations: [
@@ -17,12 +20,16 @@ import { HttpClientModule } from "@angular/common/http";
     OdsesComponent,
     PaisesComponent,
     DestinatariosComponent,
-    NavBarComponent
+    NavBarComponent,
+    ListProjectsFilter01Component,
+    Filter01Component
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

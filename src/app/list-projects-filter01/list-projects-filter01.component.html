@@ -1,5 +1,5 @@
-<a class="btn btn-primary" routerLink="/listProjectsFilter01">Buscador con 2 desplegables</a>
 
+<app-filter01 (somethingSelected)="filter($event)"></app-filter01>
 <table class="table">
   <thead>
   <tr>
@@ -8,7 +8,7 @@
   </tr>
   </thead>
   <tbody>
-  <ng-container *ngFor="let proyecto of proyectos">
+  <ng-container *ngFor="let proyecto of proyectosToShow">
     <tr>
       <th>{{proyecto.nombreProyecto}}</th>
       <td>{{proyecto.fechaInicio | date: 'dd-MMM-y'}}</td>
@@ -16,3 +16,4 @@
   </ng-container>
   </tbody>
 </table>
+

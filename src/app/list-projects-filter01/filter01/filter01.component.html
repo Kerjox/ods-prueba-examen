@@ -1,0 +1,18 @@
+<div class="row">
+  <div class="col-6">
+    <select class="form-select" [(ngModel)]="idOdse" (ngModelChange)="filter()">
+      <option selected value="-1">Selecciona un ODS</option>
+      <ng-container *ngFor="let ods of odses">
+        <option [value]="ods.id">{{ods.nombreOds}}</option>
+      </ng-container>
+    </select>
+  </div>
+  <div class="col-6">
+    <select class="form-select" [(ngModel)]="idDestinatario" (ngModelChange)="filter()">
+      <option selected value="-1">Selecciona un destinatario</option>
+      <ng-container *ngFor="let destinatario of destinatarios">
+        <option [value]="destinatario.id">{{destinatario.nombreDestinatario}}</option>
+      </ng-container>
+    </select>
+  </div>
+</div>

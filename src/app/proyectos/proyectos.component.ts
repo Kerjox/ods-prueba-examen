@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Proyecto } from "../entities/proyecto";
 
 @Component({
   selector: 'app-proyectos',
@@ -7,7 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProyectosComponent implements OnInit {
 
-  constructor() { }
+  proyectos: Proyecto[];
+
+  constructor() {
+
+    this.proyectos = [];
+  }
 
   ngOnInit(): void {
   }
